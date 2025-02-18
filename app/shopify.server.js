@@ -5,6 +5,7 @@ import {
   shopifyApp,
 } from "@shopify/shopify-app-remix/server";
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
+import { restResources } from "@shopify/shopify-api/rest/admin/2024-07";
 import prisma from "./db.server";
 
 const shopify = shopifyApp({
@@ -16,6 +17,7 @@ const shopify = shopifyApp({
   authPathPrefix: "/auth",
   sessionStorage: new PrismaSessionStorage(prisma),
   distribution: AppDistribution.AppStore,
+  restResources,
   future: {
     unstable_newEmbeddedAuthStrategy: true,
     removeRest: true,
@@ -33,23 +35,4 @@ export const unauthenticated = shopify.unauthenticated;
 export const login = shopify.login;
 export const registerWebhooks = shopify.registerWebhooks;
 export const sessionStorage = shopify.sessionStorage;
-
-export const getAllSessionData = async (shop) => {
-  try {
-    const sessions = await prisma.session.findFirst({
-      where: { shop },
-    });
-    if (!sessions)
-      return {
-        status: 404,
-        message: "Shop not found",
-      };
-    return sessions;
-  } catch (error) {
-    console.error("Error fetching all session data:", error);
-    return [];
-  }
-};
-
-// Export session directly if needed
-export const session = shopify.session;
+export const restResources = shopify.restResources;

@@ -5,7 +5,7 @@ import {
   Checkbox,
   Text,
   useApi,
-  useApplyAttributeChange, 
+  useApplyAttributeChange,
   useInstructions,
   useTranslate,
 } from "@shopify/ui-extensions-react/checkout";
@@ -23,10 +23,10 @@ function Extension() {
   const applyAttributeChange = useApplyAttributeChange();
 
   // Make sure APP_URL is set correctly
-  const apiUrl = `${process.env.APP_URL}/api/checkout-sucess`;
+  const apiUrl = `${process.env.APP_URL}/api/additional`;
   // console.log("API URL:", apiUrl);
 
-  useEffect(() => { 
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const token = await sessionToken.get();
@@ -87,3 +87,48 @@ function Extension() {
     console.log("applyAttributeChange result", result);
   }
 }
+
+// // import {
+//   reactExtension,
+//   useApi,
+//   Button,
+//   Link,
+//   Modal,
+//   TextBlock,
+// } from "@shopify/ui-extensions-react/checkout";
+// import { ScrollView } from "@shopify/ui-extensions/checkout";
+
+// export default reactExtension("purchase.checkout.block.render", () => (
+//   <Extension />
+// ));
+
+// function Extension() {
+//   const { ui } = useApi();
+//   const data = (id) => () => {
+//     console.log("Button clicked with ID:", id);
+//     ui.overlay.close("my-modal");
+//   };
+//   return (
+//     <Button
+//       overlay={
+//         <Modal id="my-modal" padding title="Return policy">
+//           <ScrollView>
+//             <TextBlock>
+//               We have a 30-day return policy, which means you have 30 days after
+//               receiving your item to request a return.
+//             </TextBlock>
+//             <TextBlock>
+//               To be eligible for a return, your item must be in the same
+//               condition that you received it, unworn or unused, with tags, and
+//               in its original packaging. You’ll also need the receipt or proof
+//               of purchase.
+//             </TextBlock>
+//             <Button onPress={data(1)}>Close</Button>
+//           </ScrollView>
+//         </Modal>
+//       }
+//     >
+//       Return policy
+//     </Button>
+//   );
+// }

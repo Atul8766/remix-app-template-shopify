@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "8d35c64a6663dab2d358f2dcca08f648"
-application_url = "https://excellence-passengers-resource-observation.trycloudflare.com"
+application_url = "https://advantage-assuming-kenneth-sections.trycloudflare.com"
 embedded = true
 name = "premium-merchandise-app"
 handle = "premium-merchandise-app-16"
@@ -24,13 +24,13 @@ api_version = "2025-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,write_customers,read_customers,read_orders,write_order_edits"
+scopes = "write_products,write_customers,read_customers,read_orders,write_order_edits,write_draft_orders,write_orders"
 
 [auth]
 redirect_urls = [
-  "https://excellence-passengers-resource-observation.trycloudflare.com/auth/callback",
-  "https://excellence-passengers-resource-observation.trycloudflare.com/auth/shopify/callback",
-  "https://excellence-passengers-resource-observation.trycloudflare.com/api/auth/callback"
+  "https://advantage-assuming-kenneth-sections.trycloudflare.com/auth/callback",
+  "https://advantage-assuming-kenneth-sections.trycloudflare.com/auth/shopify/callback",
+  "https://advantage-assuming-kenneth-sections.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

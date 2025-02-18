@@ -45,10 +45,10 @@ export default defineConfig({
       allow: ["app", "node_modules"],
     },
     cors: {
-      origin: "*", // Allow all origins (not recommended for production)
+      origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true, // Allow credentials (cookies, authorization headers)
+      credentials: true,
     },
   },
   plugins: [
