@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "routes": [
+    { "src": "/(.*)", "dest": "/build/index.js" }
+  ]
+}

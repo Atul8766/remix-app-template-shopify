@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "8d35c64a6663dab2d358f2dcca08f648"
-application_url = "https://advantage-assuming-kenneth-sections.trycloudflare.com"
+application_url = "https://remix-app-template-shopify.vercel.app"
 embedded = true
 name = "premium-merchandise-app"
 handle = "premium-merchandise-app-16"
@@ -28,9 +28,9 @@ scopes = "write_products,write_customers,read_customers,read_orders,write_order_
 
 [auth]
 redirect_urls = [
-  "https://advantage-assuming-kenneth-sections.trycloudflare.com/auth/callback",
-  "https://advantage-assuming-kenneth-sections.trycloudflare.com/auth/shopify/callback",
-  "https://advantage-assuming-kenneth-sections.trycloudflare.com/api/auth/callback"
+  "https://remix-app-template-shopify.vercel.app/auth/callback",
+  "https://remix-app-template-shopify.vercel.app/auth/shopify/callback",
+  "https://remix-app-template-shopify.vercel.app/api/auth/callback"
 ]
 
 [pos]
